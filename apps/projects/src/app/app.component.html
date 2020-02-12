@@ -1,1 +1,14 @@
-<router-outlet></router-outlet>
+<workspace-toolbar [title]="title" [sidenav]="sidenav"></workspace-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side">
+    <nav>
+      <a mat-button class="nav-link" *ngFor="let link of links"
+        [routerLink]="link.path" routerLinkActive="active-route">
+        <mat-icon>{{link.icon}}</mat-icon>
+        {{link.label}}
+      </a>
+    </nav>
+  </mat-sidenav>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>

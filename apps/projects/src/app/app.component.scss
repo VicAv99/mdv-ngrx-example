@@ -1,0 +1,21 @@
+mat-sidenav {
+  width: 200px;
+}
+
+.active-route {
+  color: #34587c !important; // overwrite navlink color when route is active
+}
+
+.mat-sidenav-container {
+  background: #F4F5FA;
+  flex: 1;
+  height: calc(100vh - 55px);
+}
+
+.nav-link {
+  color: rgba(0, 0, 0, .54);
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
