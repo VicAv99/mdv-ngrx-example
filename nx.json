@@ -10,5 +10,28 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "projects": {
+      "tags": []
+    },
+    "projects-e2e": {
+      "tags": [],
+      "implicitDependencies": ["projects"]
+    },
+    "core-data": {
+      "tags": []
+    },
+    "core-state": {
+      "tags": []
+    },
+    "material": {
+      "tags": []
+    },
+    "ui-toolbar": {
+      "tags": []
+    },
+    "ui-login": {
+      "tags": []
+    }
+  }
 }
