@@ -94,7 +94,7 @@ $custom-theme: mat-light-theme($custom-primary, $custom-accent, $custom-warn);
 // Overwrite Material's base typography
 // https://material.angular.io/guide/typography#customization
 $custom-typography: mat-typography-config(
-  $font-family: 'Montserrat', Roboto, 'Helvetica Neue', sans-serif
+  $font-family: 'Montserrat, Roboto, Helvetica Neue, sans-serif'
 );
 
 @include angular-material-typography($custom-typography);
