@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+// Import custom material theme.
+@import './theme.scss';
+
+// NOTE: We use Angular Material as our base styling framework.
+// However, bootstrap has some pretty good utility (including flex) and grid classes that are permissable.
+// The below imported packages have them neatly wrapped up without any of the other bootstrap ui.
+// Please refer to bootstrap documentation on what these classes are.
+@import '~bootstrap-4-grid'; // https://getbootstrap.com/docs/4.4/layout/grid/
+@import '~bootstrap-utilities'; // https://getbootstrap.com/docs/4.4/utilities/
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Montserrat', Roboto, 'Helvetica Neue', sans-serif; }
