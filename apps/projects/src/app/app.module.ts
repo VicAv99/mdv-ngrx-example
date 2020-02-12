@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectsListComponent } from './projects/projects-list/projects-list.component';
 import { ProjectsDetailsComponent } from './projects/projects-details/projects-details.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ProjectsDetailsComponent } from './projects/projects-details/projects-d
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    RouterModule,
     CoreDataModule,
     CoreStateModule,
     MaterialModule,
