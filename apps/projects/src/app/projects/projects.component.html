@@ -1,1 +1,15 @@
-<p>projects works!</p>
+<div class="container d-flex mt-3">
+  <div class="col-6">
+    <workspace-projects-list [projects]="projects$ | async"
+                              (selected)="select($event)"
+                              (deleted)="delete($event)">
+    </workspace-projects-list>
+  </div>
+  <div class="col-6">
+    <workspace-projects-details [group]="form"
+                                [project]="project"
+                                (saved)="save($event)"
+                                (cancelled)="reset()">
+    </workspace-projects-details>
+  </div>
+</div>

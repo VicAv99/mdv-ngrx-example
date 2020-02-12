@@ -1,1 +1,36 @@
-<p>projects-details works!</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title *ngIf="!selectedProject.id; else update">Create A Project</mat-card-title>
+    <ng-template #update>
+      <mat-card-title>Update {{selectedProject.title}} Project</mat-card-title>
+    </ng-template>
+    <mat-card-subtitle>totally rad projects!</mat-card-subtitle>
+  </mat-card-header>
+  <form [formGroup]="group" (submit)="saved.emit(group.value)">
+    <mat-card-content class="mb-0">
+
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Title</mat-label>
+        <input matInput type="text" placeholder="Type your title here"
+          formControlName="title" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Details</mat-label>
+        <textarea matInput type="text" placeholder="Type your details here"
+          formControlName="details">
+        </textarea>
+      </mat-form-field>
+
+      <span>Importance Level</span>
+      <mat-slider [thumbLabel]="true" class="w-100"
+        formControlName="importanceLevel">
+      </mat-slider>
+
+    </mat-card-content>
+    <mat-card-actions class="d-flex flex-row-reverse mb-0">
+      <button mat-button type="submit" color="primary">Submit</button>
+      <button mat-button type="reset" color="warn" (click)="cancelled.emit()">Cancel</button>
+    </mat-card-actions>
+  </form>
+</mat-card>

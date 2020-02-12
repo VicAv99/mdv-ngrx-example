@@ -88,7 +88,7 @@ export class ProjectsEffects {
         state: ProjectsPartialState
       ) => {
         return this.projectsService.delete(action.project).pipe(
-          map((project: Project) => projectsActions.projectDeleted({ project }))
+          map(() => projectsActions.projectDeleted({ project: action.project }))
         );
       },
       onError: (action: ReturnType<typeof projectsActions.deleteProject>, error) => {
