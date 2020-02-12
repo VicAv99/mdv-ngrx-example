@@ -12,7 +12,7 @@ export const loadProjects = createAction('[PROJECT] Load Projects');
 
 export const loadProject = createAction(
   '[PROJECT] Load Project',
-  props<{ project: Project }>()
+  props<{ projectId: string }>()
 );
 
 export const projectsLoaded = createAction(

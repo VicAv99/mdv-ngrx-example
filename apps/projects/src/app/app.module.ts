@@ -15,13 +15,15 @@ import { AppComponent } from './app.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectsListComponent } from './projects/projects-list/projects-list.component';
 import { ProjectsDetailsComponent } from './projects/projects-details/projects-details.component';
+import { ProjectsViewComponent } from './projects/projects-view/projects-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectsComponent,
     ProjectsListComponent,
-    ProjectsDetailsComponent
+    ProjectsDetailsComponent,
+    ProjectsViewComponent
   ],
   imports: [
     BrowserModule,

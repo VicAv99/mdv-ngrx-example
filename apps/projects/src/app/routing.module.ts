@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ProjectsComponent } from './projects/projects.component';
 import { LoginComponent } from '@workspace/ui-login';
+import { ProjectsComponent } from './projects/projects.component';
+import { ProjectsViewComponent } from './projects/projects-view/projects-view.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/projects', pathMatch: 'full'},
-  {path: 'projects', component: ProjectsComponent},
+  {
+    path: '', children: [
+      {path: '', redirectTo: '/projects', pathMatch: 'full'},
+      {path: 'projects', component: ProjectsComponent},
+      {path: 'project/:id', component: ProjectsViewComponent}
+    ]
+  },
   {path: 'login', component: LoginComponent},
   {path: '**', redirectTo: '/projects'}
 ];

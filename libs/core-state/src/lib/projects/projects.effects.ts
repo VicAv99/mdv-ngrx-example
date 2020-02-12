@@ -32,7 +32,7 @@ export class ProjectsEffects {
         action: ReturnType<typeof projectsActions.loadProject>,
         state: ProjectsPartialState
       ) => {
-        return this.projectsService.findOne(action.project).pipe(
+        return this.projectsService.findOne(action.projectId).pipe(
           map((project: Project) => projectsActions.projectLoaded({ project }))
         );
       },

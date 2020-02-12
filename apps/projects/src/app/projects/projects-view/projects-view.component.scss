@@ -1,0 +1,6 @@
+.back-animation {
+  transition: all .2s ease-in;
+  &:hover {
+    padding-right: 10px;
+  }
+}

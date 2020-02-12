@@ -1,0 +1,21 @@
+<button mat-icon-button type="button" color="primary" class="back-animation mt-4 ml-5" (click)="back()">
+  <mat-icon>arrow_back</mat-icon>
+</button>
+
+<div *ngIf="project$ | async as project" class="container d-flex justify-content-center mt-5">
+  <div class="col-4">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{project.title | titlecase}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div>
+          <strong>Details: </strong>
+          {{project.details}}
+        </div>
+        <strong>Importance Level: </strong>
+        {{project.importanceLevel}}
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -36,8 +36,8 @@ export class ProjectsFacade {
     this.dispatch(projectsActions.loadProjects());
   }
 
-  loadProject(project: Project) {
-    this.dispatch(projectsActions.loadProject({ project }));
+  loadProject(projectId: string) {
+    this.dispatch(projectsActions.loadProject({ projectId }));
   }
 
   createProject(project: Project) {

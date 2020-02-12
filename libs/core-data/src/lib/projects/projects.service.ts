@@ -17,8 +17,8 @@ export class ProjectsService {
     return this.httpClient.get(this.getUrl());
   }
 
-  findOne(project: Project) {
-    return this.httpClient.get(this.getUrlWithId(project.id));
+  findOne(projectId: string) {
+    return this.httpClient.get(this.getUrlWithId(+projectId));
   }
 
   create(project: Project) {

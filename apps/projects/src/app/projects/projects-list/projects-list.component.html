@@ -4,7 +4,7 @@
     <mat-list-item *ngFor="let project of projects" class="mat-list-option" (click)="selected.emit(project)">
       <h4 matLine>{{project.title}}</h4>
       <span matLine>{{project.details}}</span>
-      <button mat-icon-button color="primary" type="button" (click)="$event.stopImmediatePropagation();">
+      <button mat-icon-button color="primary" type="button" (click)="viewProjectDetails(project); $event.stopImmediatePropagation();">
         <mat-icon>more_vert</mat-icon>
       </button>
       <button mat-icon-button color="warn" type="button" (click)="deleted.emit(project); $event.stopImmediatePropagation();">
